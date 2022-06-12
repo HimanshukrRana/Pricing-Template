@@ -1,0 +1,157 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-position-x: right;
+    background-color: #dadcf6;
+}
+
+.header {
+    text-align: center;
+
+}
+
+.toggle-switch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.toggle-switch-lable {
+    margin: 0;
+    /* padding: 0 20px; */
+    color: #838ace;
+    font-size: 0.95rem;
+    display: inline-block;
+}
+
+.toggle {
+    position: relative;
+    display: inline-block;
+    height: 28px;
+    width: 50px;
+    margin: 0 20px;
+}
+
+.toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle input:checked+.toggle-switch-slider {
+    background-color: #696fdd;
+}
+
+.toggle input:checked+.toggle-switch-slider:before {
+    transform: translateX(22px);
+}
+
+.toggle-switch-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.2s;
+    border-radius: 34px;
+}
+
+.toggle-switch-slider::before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+.main {
+    display: flex;
+    /* flex-direction: column; */
+    margin: 0 12rem;
+    margin-top: 4em;
+    padding: 0 31px;
+    /* align-items: center; */
+
+}
+
+.card {
+
+
+    font-weight: 700;
+    padding: 35px 30px;
+    text-align: center;
+    margin-bottom: 35px;
+    border-radius: 5px;
+    min-width: 260px;
+}
+
+.card-features {
+    margin-bottom: 35px;
+    color: #6d708d;
+    margin-left: -33px;
+}
+
+
+
+.card-features li {
+    padding: 15px;
+    border-top: #dbddf0 solid 1px;
+    list-style: none;
+}
+
+.card--light {
+    background-color: #FFF;
+    height: 25rem;
+    margin-top: 5px;
+}
+
+.card--professional {
+    color: #FFF;
+    background: linear-gradient(90deg, #a3a8f0 0%, #696fdd 100%);
+}
+
+.card--professional .card-title,
+.card--professional .card-amount,
+.card--professional .card-features {
+    color: #FFF;
+}
+
+.card--professional .btn {
+    color: #696fdd;
+    background: #FFF;
+}
+
+.card-title {
+    font-size: 1.1rem;
+    margin-bottom: 32px;
+    color: #7d84c0;
+}
+
+.card-amount::first-letter {
+    font-size: 60%;
+    vertical-align: middle;
+}
+
+.card-amount--hidden {
+    display: none;
+}
+
+.btn {
+    font-size: 0.75rem;
+    letter-spacing: 0.08rem;
+    text-transform: uppercase;
+    border-radius: 5px;
+    display: block;
+    padding: 18px;
+    color: #FFF;
+    background: linear-gradient(90deg, #a3a8f0 0%, #696fdd 100%);
+    cursor: pointer;
+}
